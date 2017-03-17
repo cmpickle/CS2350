@@ -1,0 +1,29 @@
+/*
+  
+   Civil War Studies Style Sheet
+   Author: Cameron Pickle
+   Date:   6/6/16
+
+   Filename:         cw.css
+   Supporting Files: tan.jpg
+
+*/
+
+body              	 					{margin: 0px}
+h2                				 		{font-size: 2.5em; margin: 0px}
+#head            							{text-align: center; border-bottom: 1px solid black; background-image: url(../images/tan.jpg); margin: 0px}
+#page_content			 						{position: relative; top: 0px; left: 0px; width: 95%; min-width: 800px; max-width: 1000px;}
+#linkList 									 	{position: absolute; top: 140px; left: 5px; width: 280px; border-right: solid black 1px;}
+#linkList a										{text-decoration: none; color: black;}
+#linkList a:hover							{text-decoration: underline; }
+ol 														{list-style-type: upper-roman; font-size: .9em;}
+ol ol													{list-style-type: upper-alpha;}
+ol ol ol											{list-style-type: decimal;}
+#article											{position: absolute; top: 190px; left: 320px;}
+h2														{position: absolute; left: 320px; top: 125px; color: #EDE3B2; z-index: 2;}
+h2.shadow										 	{position: absolute; left: 321px; top: 126px; color: black; z-index: 1;}
+.first_para:first-line				{font-variant: small-caps;}
+.first_para:first-letter			{float: left; margin-right: 5px; margin-bottom: 5px; font-size: 300%; line-height: .75;}
+.following_para								{text-indent: 10px;}
+.HTMLvalidator								{position: absolute; top: 1105px;}
+.CSSvalidator									{position: absolute; top: 1145px;}

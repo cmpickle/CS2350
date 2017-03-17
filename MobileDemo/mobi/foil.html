@@ -1,0 +1,320 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Windy Kite Store</title>
+
+<!-- REQUIRED JQUERY AND CSS -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	
+
+<!-- REQUIRED FOR CHROME (LOCAL TESTING) -->
+<script>
+$(document).bind('mobileinit',function(){
+    
+    $.mobile.pushStateEnabled = false;
+});
+</script>
+
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+<!--END CHROME -->
+
+
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+    <a href="index.html" data-role="button" data-icon="arrow-l" rel="external">Back</a>
+		<h1>Foil Kites</h1>
+	</div><!-- end header -->
+	<div data-role="content">
+    <p>Foil kites are soft kites based on the design of the parafoil. They consist of a number of cells running fore to aft, some or all of which are open at the front to allow air to inflate the kite so it takes on an aerofoil section. Due to the amount of power that these kites can generate, they can be used for a variety of different activities including kitesurfing, kiteboarding on land, snowkiting, kite buggying and recreational kiting.</p>
+        
+<ul data-role="listview" data-inset="true" >
+    <li><a href="#bug">Mighty Bug</a></li>
+    <li><a href="#symphony">Symphony</a></li>
+    <li><a href="#fury">Fury 47"</a></li>
+    <li><a href="#beach">Beach</a></li>
+</ul>
+        	
+<a href="#acc" data-role="button" data-icon="star" data-theme="e" data-rel="dialog">Accessories </a>	
+</div><!-- end content -->
+</div><!-- end page -->
+
+
+
+<div data-role="page" id="bug" data-add-back-btn="true">
+	<div data-role="header" data-add-back-btn="true" >
+		<h1>Mighty Bug</h1>
+	</div><!-- end header -->
+	<div data-role="content" >
+    <h2>Mighty Bug Red by Flying Wings Kites</h2>	
+	<div class="ui-grid-a">
+      <div class="ui-block-a">
+        <dl>
+          <dt>Part Number: </dt>
+          <dd>kt104b5</dd>
+          <dt>Kite Size: </dt>
+          <dd>55 in. X 63 in.</dd>
+          <dt>Recomended Age:</dt>
+          <dd>10+</dd>
+          <dt>Optimal Wind Speed:</dt>
+          <dd>5-18 mph</dd>
+        </dl>
+      </div><!-- end left side -->
+        <div class="ui-block-b">
+            <img src="images/mightybug.jpg">
+        </div> <!-- end right side -->
+	</div><!-- /grid-a -->
+<p>There are currently 3 Mighty Bug kites in stock.</p>
+<form action="#" method="post" enctype="multipart/form-data">
+
+<label>How many would you like?:<input type="number" name="name" id="name" value=""  /></label>
+    
+    <button class="ui-btn-hidden" data-theme="b" type="submit" aria-disabled="false">Add to Cart</button>
+    
+
+</form>    	
+
+	</div><!-- end content -->
+	<div data-role="footer" data-position="fixed">
+		<span>Kitty Hawk Kites</span>
+	</div><!-- end footer -->
+</div><!-- end page -->
+
+
+
+<div data-role="page" id="symphony" data-add-back-btn="true">
+	<div data-role="header" data-add-back-btn="true">
+		<h1>Symphony</h1>
+	</div><!-- end header -->
+	<div data-role="content">
+    <h2>Symphony Beach  1.7 by HQ Kites</h2>	
+	<div class="ui-grid-a">
+      <div class="ui-block-a">
+        <dl>
+          <dt>Part Number: </dt>
+          <dd>kt1wwer45</dd>
+          <dt>Kite Size: </dt>
+          <dd>400 in. X 50 in.</dd>
+          <dt>Recomended Age:</dt>
+          <dd>18+</dd>
+          <dt>Optimal Wind Speed:</dt>
+          <dd>12-18 mph</dd>
+        </dl>
+      </div><!-- end left side -->
+        <div class="ui-block-b">
+            <img src="images/symphony.jpg">
+        </div> <!-- end right side -->
+	</div><!-- /grid-a -->
+<p>There are currently 6 Symphony kites in stock.</p>
+<form action="#" method="post" enctype="multipart/form-data">
+
+<label>How many would you like?:<input type="number" name="name" id="name" value=""  /></label>
+    
+    <button class="ui-btn-hidden" data-theme="b" type="submit" aria-disabled="false">Add to Cart</button>
+    
+
+</form>    	
+
+	</div><!-- end content -->
+	<div data-role="footer" data-position="fixed">
+		<span>Kitty Hawk Kites</span>
+	</div><!-- end footer -->
+</div><!-- end page -->
+
+
+
+
+
+
+
+
+<div data-role="page" id="fury" data-add-back-btn="true">
+	<div data-role="header" data-add-back-btn="true">
+		<h1>Fury 47</h1>
+	</div><!-- end header -->
+	<div data-role="content">
+    <h2>Fury Foil Kite 47 in. by HQ Kites</h2>	
+	<div class="ui-grid-a">
+      <div class="ui-block-a">
+        <dl>
+          <dt>Part Number: </dt>
+          <dd>btr104b5</dd>
+          <dt>Kite Size: </dt>
+          <dd>20 in. X 30 in.</dd>
+          <dt>Recomended Age:</dt>
+          <dd>6-18</dd>
+          <dt>Optimal Wind Speed:</dt>
+          <dd>3-8 mph</dd>
+        </dl>
+      </div><!-- end left side -->
+        <div class="ui-block-b">
+            <img src="images/fury.jpg">
+        </div> <!-- end right side -->
+	</div><!-- /grid-a -->
+<p>There are currently 3 Fury 47 kites in stock.</p>
+<form action="#" method="post" enctype="multipart/form-data">
+
+<label>How many would you like?:<input type="number" name="name" id="name" value=""  /></label>
+    
+    <button class="ui-btn-hidden" data-theme="b" type="submit" aria-disabled="false">Add to Cart</button>
+    
+
+</form>    	
+
+	</div><!-- end content -->
+	<div data-role="footer" data-position="fixed">
+		<span>Kitty Hawk Kites</span>
+	</div><!-- end footer -->
+</div><!-- end page -->
+
+
+
+
+
+
+
+
+
+<div data-role="page" id="beach" data-add-back-btn="true">
+	<div data-role="header" data-add-back-btn="true">
+		<h1>Beach Rider</h1>
+	</div><!-- end header -->
+	<div data-role="content">
+    <h2>F-Box Beach Kite by Into the Wind</h2>	
+	<div class="ui-grid-a">
+      <div class="ui-block-a">
+        <dl>
+          <dt>Part Number: </dt>
+          <dd>mrt104b5</dd>
+          <dt>Kite Size: </dt>
+          <dd>40 in. X 63 in.</dd>
+          <dt>Recomended Age:</dt>
+          <dd>12+</dd>
+          <dt>Optimal Wind Speed:</dt>
+          <dd>25-50 mph</dd>
+        </dl>
+      </div><!-- end left side -->
+        <div class="ui-block-b">
+            <img src="images/beach.jpg">
+        </div> <!-- end right side -->
+	</div><!-- /grid-a -->
+<p>There are currently 10 Beach kites in stock.</p>
+<form action="#" method="post" enctype="multipart/form-data">
+
+<label>How many would you like?:<input type="number" name="name" id="name" value=""  /></label>
+    
+    <button class="ui-btn-hidden" data-theme="b" type="submit" aria-disabled="false">Add to Cart</button>
+    
+
+</form>    	
+
+	</div><!-- end content -->
+	<div data-role="footer" data-position="fixed">
+		<span>Kitty Hawk Kites</span>
+	</div><!-- end footer -->
+</div><!-- end page -->
+
+
+
+
+
+
+
+
+
+<div data-role="page" id="bug" data-add-back-btn="true">
+	<div data-role="header">
+		<h1>Mighty Bug</h1>
+	</div><!-- end header -->
+	<div data-role="content">
+    <h2>Mighty Bug Red by Flying Wings Kites</h2>	
+	<div class="ui-grid-a">
+      <div class="ui-block-a">
+        <dl>
+          <dt>Part Number: </dt>
+          <dd>kt104b5</dd>
+          <dt>Kite Size: </dt>
+          <dd>55 in. X 63 in.</dd>
+          <dt>Recomended Age:</dt>
+          <dd>10+</dd>
+          <dt>Optimal Wind Speed:</dt>
+          <dd>5-18 mph</dd>
+        </dl>
+      </div><!-- end left side -->
+        <div class="ui-block-b">
+            <img src="images/mightybug.jpg">
+        </div> <!-- end right side -->
+	</div><!-- /grid-a -->
+<p>There are currently 3 Mighty Bug kites in stock.</p>
+<form action="#" method="post" enctype="multipart/form-data">
+
+<label>How many would you like?:<input type="number" name="name" id="name" value=""  /></label>
+    
+    <button class="ui-btn-hidden" data-theme="b" type="submit" aria-disabled="false">Add to Cart</button>
+    
+
+</form>    	
+
+	</div><!-- end content -->
+	<div data-role="footer" data-position="fixed">
+		<span>Kitty Hawk Kites</span>
+	</div><!-- end footer -->
+</div><!-- end page -->
+
+
+
+
+
+
+
+
+
+
+
+<div data-role="page" id="acc" data-theme="b">
+	<div data-role="header">
+		<h1>Accessories</h1>
+	</div><!-- end header -->
+	<div data-role="content">
+    <h2>Accesorize your Kite</h2>	
+	
+<div data-role="collapsible">
+   <h3>Tails</h3>
+   <p>Tails help you kite stay headed into the wind. You can improve your kite with a longer tail, extra streamers, a rotating decoration, or by attaching designs to the line we call line art or line laundry. </p>
+</div><!-- end collapse -->
+    
+<div data-role="collapsible">
+   <h3>Bags</h3>
+   <p>Tails help you kite stay headed into the wind. You can improve your kite with a longer tail, extra streamers, a rotating decoration, or by attaching designs to the line we call line art or line laundry. </p>
+</div><!-- end collapse -->
+
+<div data-role="collapsible">
+   <h3>String</h3>
+   <p>Kite string,kite tails, every kite accessory you need to fly your kite and dress it up: Line Laundry, tails, spinners, kite string and more things than you could imagine that will enhance your kiting experience.</p>
+</div><!-- end collapse -->
+
+<div data-role="collapsible">
+   <h3>Handles</h3>
+   <p>Pre-stretched, pre-sleeved top quality color-coded Dyneema flying lines on storage winder.</p>
+</div><!-- end collapse -->
+	</div><!-- end content -->
+	<div data-role="footer" data-position="fixed">
+		<span>Kitty Hawk Kites</span>
+	</div><!-- end footer -->
+</div><!-- end page -->
+
+
+
+
+
+
+</body>
+</html>

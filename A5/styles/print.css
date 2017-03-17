@@ -1,0 +1,22 @@
+/*
+  
+   Civil War Studies Style Sheet for printer
+   Author: Cameron Pickle
+   Date:   6/7/16
+
+   Filename:         print.css
+   Supporting Files: none
+
+*/
+
+@page 							 		 	 {size:8.5in 11in; margin: 0.5in;}
+#head, #linkList, #address {display: none;}
+h1, h2, h3, h4, h5, h6 		 {font-family: sans-serif;}
+h2										 		 {position: absolute; top: 0px; left: 0px;}
+h2.shadow									 {position: absolute; top: 1px; left: 0px;}
+#article							 		 {position: absolute; top:30px; left: 0px;}
+.HTMLvalidator						 {display: none;}
+.CSSvalidator							 {display: none;}
+
+
+

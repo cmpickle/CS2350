@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photography Guide</title>
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css">
+<script  type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script  type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+<style type="text/css">
+.images {
+height: 150;
+}
+.images img {
+max-width: 100%;
+width: auto\9;
+}
+</style>
+
+<!-- REQUIRED FOR CHROME (LOCAL TESTING) -->
+<script>
+$(document).bind('mobileinit',function() {
+    $mobile.pushStateEnabled = false;
+});
+</script>
+<!-- END CHROME -->
+
+</head>
+<body>
+
+<div data-role="page" id="page">
+  <div data-role="header" data-theme="a">
+	  <h1 class="ui-title">Photography Guide</h1>
+	</div>
+	<div data-role="content" data-theme="b">
+		<div class="images">
+		<img src="images/White Pine Lake.jpg" alt="White Pine Lake">
+		</div>
+		<ul data-role="listview">
+		  <li data-theme="c">
+				    <a data-transition="flip" href="#video">Video</a>
+			</li>
+			<li data-theme="c">
+					  <a href="photo.html" data-transition="slide" rel="external" class="ui-inner-link">How to Take a Great Photo</a>
+			</li>
+			<li data-theme="c">
+						<a data-transition="turn" href="#rot">Rule of Thirds</a>
+			</li>
+		</ul>
+		<br>
+		<a href="#popup" data-role="button" data-rel="dialog" data-transition="flow" data-icon="info" data-theme="b">Photo Quote</a>
+	</div><!-- end content -->
+</div><!-- end page -->
+
+<div data-role="page" id="video" data-add-back-btn="true">
+  <div data-role="header" data-add-back-btn="true" data-theme="a">
+	  <h1>Photography Video</h1>
+	</div>
+	<div data-role="content">
+	  <video width="320" height="240" controls>
+      <source src="video/Photo Gallery.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+		
+	</div><!-- end content -->
+</div><!-- end page -->
+
+<div data-role="page" id="rot" data-add-back-btn="true">
+  <div data-role="header" data-add-back-btn="true" data-theme="a">
+	  <h1>Rule of Thirds</h1>
+	</div>
+	<div data-role="content">
+	  <div class="images">
+	    <img src="images/Green Pond rot.jpg" alt="Rule of Thirds Example">
+		</div>
+		<p>The Rule of Thirds is essentially if you took your image and put two lines space in evenly vertically and horizontally then found the four intersections of those lines. Those four areas (circled intersections below) are the points of interest on your photo. Studies have shown that putting your subject in those points of interest make looking at the photo more natural for the viewer.</p>
+		<p>Another thing Rule of Thirds can also be used in photography to make stronger images by making lines along one of the Rule of Thirds line through the image. An example of this would be a horizon in a landscape photo being along the upper third line or the lower third line instead of the center of the photo. In the photo to the right the skyline of the mountains is on the upper line of the Rule of Thirds lines.</p>
+		<p>While using Rule of Thirds isn't always necessary, it can greatly enhance images and make them look more natural to the viewer. A great thing about digital photography is you can crop your images to make your subject in Rule of Thirds after you have taken the photo. If you don't already I would suggest trying taking pictures with the Rule of Thirds in mind. You can even take two pictures one where the subject is centered and one where the subject is in one of the points of interest based on the Rule of Thirds and compare to see the difference. With this you can find when and where you think that Rule of Thirds make a more effective photo over a central subject.</p>		
+	</div><!-- end content -->
+</div><!-- end page -->
+
+<div data-role="dialog" id="popup" data-url="dialog" class="ui-page ui-body-b ui-overlay-a ui-dialog" role="dialog">
+  <div data-role="header" data-theme="a" role="banner">
+	  <h1>Photography Dialog</h1>
+	</div>
+	<div class="ui-content" role="main">
+	  <div class="images">
+	    <img src="images/Olympus Saddle.jpg" alt="Mount Olympus">
+		  <cite>Sometimes I do get to places just when God's ready to have somebody click the shutter. - Ansel Adams</cite>
+		</div>
+	</div><!-- end content -->
+</div><!-- end page -->
+
+</body>
+</html>

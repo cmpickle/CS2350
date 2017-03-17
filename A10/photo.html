@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Pickle's Bacon Guide</title>
+
+<!-- 
+Author: Cameron Pickle
+File: ~/cp96123/public_html/A10/photo.html
+Honor Code: I acknowledge that this code represents my own work: Dated 7/27/16
+-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Build a page that uniquely and creatively (using JQuery in a constructive way) demonstrates 14 JQuery items." />
+<meta name="keywords" content="photography, cameras, pictures" />
+<meta name="author" content="Cameron Pickle" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<style>
+#baconFist {
+  display:none;
+}
+#noEatBurnt,#noEatRaw {
+  color:white;
+}
+#yesEat {
+  color:white;
+}
+#realBacon {
+  display:none;
+}
+#slidervalue {
+  border:0; 
+	color:red; 
+	font-weight:bold;
+}
+#draggable {
+    width: 100px;
+    height: 100px;
+  }
+  #droppable {
+    width: 125px;
+    height: 125px;
+  }
+	.caption {
+	  font-size: 8px;
+	}
+</style>
+</head>
+<body> 
+<h1>Pickle's Bacon Guide</h1>
+<h2>Bacon Accordion Tutorial</h2>
+<div id="accordion">
+  <h3>Bacon Selection</h3>
+  <div>
+    <p>When selecting bacon there are a few things to keep in mind. You want a good quality bacon for maximum enjoyment. The best bacon is a good thick bacon that is peppered. You don't want some bacon that is thin and tastes like cardboard.</p>
+		<img src="img/yay bacon.jpg" id="baconFist" alt="Bacon in fist" width="200" height="200">
+		<figcaption class="caption">https://thenypost.files.wordpress.com/2015/10/dsfddfdf.jpg?quality=90&strip=all&w=664&h=441&crop=1</figcaption>
+    <button id="baconFistButton">Where's the bacon?</button>
+		<p>Example of BOUNCE effect</p>
+	</div>
+  <h3>Bacon Cooking</h3>
+  <div>
+    <p>When cooking bacon you want to make sure that it is cooked until nice and crip. You don't want to over cook the bacon though because burnt bacon just isn't near as good. But you don't want to undercook it either and miss out on all the crispy goodness.</p>
+		<table>
+		  <tr>
+			  <td>
+		      <img src="img/burntbacon.jpg" alt="burnt bacon" width="200" height="200">
+					<figcaption class="caption">https://noogacms.s3.amazonaws.com/assets/53a5641157b928a20552466ee78f6bc262529.JPG</figcaption>
+		      <button id="eatBurnt">Eat?</button>
+		      <p id="noEatBurnt">No!</p>
+				</td>
+				<td>
+				  <img src="img/bacon.png" alt="bacon" width="200" height="200">
+					<figcaption class="caption">http://www.pngall.com/wp-content/uploads/2016/05/Bacon.png</figcaption>
+					<button id="eatBacon">Eat?</button>
+					<p id="yesEat">YES!!!</p>
+				</td>
+				<td>
+				  <img src="img/raw bacon.jpg" alt="raw bacon" width="200" height="200">
+					<figcaption class="caption">http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2014/2/7/0/FNM_030114-Bacon-Index-006-2_s4x3.jpg</figcaption>
+		      <button id="eatRaw">Eat?</button>
+		      <p id="noEatRaw">No!</p>
+				</td>
+				<td>
+				  <p>Example of COLOR ANIMATION effect</p>
+				</td>
+			</tr>
+		</table>
+  </div>
+  <h3>Bacon Eating</h3>
+  <div>
+    <p>There is no wrong way to eat bacon. Eating bacon can be done by the handfull, one at a time, on top of any other food, inside of other foods, etc. The only wrong way to eat bacon is to buy vegan bacon because that just isn't bacon.</p>
+    <img src="img/veganbacon.jpg" id="veganBacon" alt="vegan bacon" width="200" height="200">
+		<figcaption class="caption">http://freefromharm.org/wp-content/uploads/2014/08/vegan-bacon-1.jpg</figcaption>
+		<img src="img/bacon.png" id="realBacon" alt="real bacon" width="200" height="200">
+		<button id="fixButton">Fix?</button>
+		<p>Example of EXPLODE and FADEIN effects</p>
+	</div>
+</div>
+<h2>Bacon Tabs Gallery</h2>
+<div id="tabs">
+  <ul>
+    <li><a href="#fragment1"><span>Exhibit One</span></a></li>
+    <li><a href="#fragment2"><span>Exhibit Two</span></a></li>
+    <li><a href="#fragment3"><span>Exhibit Three</span></a></li>
+  </ul>
+  <div id="fragment1">
+	  <img src="img/bacon.png" id="exhibit1" alt="tasty bacon">
+		<p>Example of PUFF effect</p>
+  </div>
+  <div id="fragment2">
+    <img src="img/bacon heart.jpg" id="exhibit2" alt="tasty bacon">
+		<figcaption class="caption">http://www.foodplease.com/sites/default/files/featured_image/piece/16/06/bacon.jpg</figcaption>
+		<p>Example of BLIND effect</p>
+  </div>
+  <div id="fragment3">
+    <img src="img/eatbacon.jpg" id="exhibit3" alt="tasty bacon">
+		<figcaption class="caption">http://www.nashfm947.com/wp-content/uploads/sites/253/2016/06/bacon.jpg</figcaption>
+		<p>Example of SLIDE effect</p>
+  </div>
+</div>
+<h2>Bacon Date Picking</h2>
+<div id="datepicker"></div>
+<label id="baconday"></label>
+
+<h2>Autocompleting Food Selector</h2>
+<p for="autocomplete">What would you like to eat? </p>
+<input id="autocomplete">
+
+<br>
+<br>
+<h2>Bacon Donation Slider</h2>
+<label>How much would you like to donate to the bacon cause? </label>
+<input id="slidervalue"></input>
+<div id="slider"></div>
+<br>
+
+<h2>Bacon Dialoge</h2>
+<button id="opener">Should I eat bacon?</button>
+<div id="dialog" title="Bacon!">YES!!!!</div>
+
+<h2>Bacon Resizable</h2>
+<img src="img/madebacon.png" alt="bacon" id="resizable"></img>
+<figcaption class="caption">https://upload.wikimedia.org/wikipedia/commons/3/31/Made20bacon.png</figcaption>
+
+<h2>Bacon Sortable</h2>
+<ul id="sortable">
+  <li>Thick bacon</li>
+  <li>Bacon</li>
+  <li>Crunchy bacon</li>
+  <li>Peppered bacon</li>
+  <li>vegan bacon</li>
+</ul>
+
+<h2>Bacon Draggable</h2>
+
+<img src="img/bacon.png" alt="mouth" id="draggable"/>
+<figcaption>Drag me</figcaption>
+<img src="img/mouth.jpg" alt="bacon" id="droppable"/>
+<figcaption class="caption">http://spynewsagency.com/wp-content/uploads/2015/01/mouth.jpg</figcaption>
+<figcaption>Drop here</figcaption>
+ 
+<script>
+$(document).ready(function() {
+$(function(){
+  $("#accordion").accordion();
+});
+
+$("#eatBurnt").click(function() { $("#noEatBurnt").animate({color: "black", backgroundColor:"red"});});
+
+$("#eatRaw").click(function() { $("#noEatRaw").animate({color: "black", backgroundColor:"red"});});
+
+$("#eatBacon").click(function() { $("#yesEat").animate({color: "black", backgroundColor:"green"});});
+
+$("#baconFistButton").click(function() { $("#baconFist").toggle("bounce", {times: 2}, "slow");});
+
+$("#fixButton").click(function() { $("#veganBacon").toggle("explode"); });
+$("#fixButton").click(function() {$("#realBacon").toggle("fade"); $("#fixButton").toggle("fade"); });
+
+$("#tabs").tabs();
+$("#tabs, #fragment1").tabs( { 
+					activate: function(event,ui){ 
+										$("#exhibit1").hide();$("#exhibit1").toggle("puff");
+										$("#exhibit2").hide();$("#exhibit2").toggle("blind");
+										$("#exhibit3").hide();$("#exhibit3").toggle("slide"); 
+					}
+});
+
+$(function() {
+			$("#datepicker").datepicker({
+				dateFormat: "dd-mm-yy",
+				onSelect: function(dateText, inst) {
+					var date = $.datepicker.parseDate(inst.settings.dateFormat || $.datepicker._defaults.dateFormat, dateText, inst.settings);
+					var dateText1 = $.datepicker.formatDate("D, d M yy", date, inst.settings);
+					adj = ['a great','an excellent','a superb','a wonderful','a perfect','the best','your']
+					$("#baconday").html("The date <b>" + dateText1 + "</b> is <b>" + adj[Math.floor(Math.random() * 7)] + " day to eat bacon!</b>");
+				}
+			});
+});
+
+$("#dialog").dialog({ autoOpen: false });
+$("#opener").click(function() {
+  $("#dialog").dialog( "open" );
+});
+
+var tags = [ "bacon", "a bacon", "crispy bacon","delishous bacon","elegant bacon","fetching bacon!","good 'ol bacon","heck, I want some bacon","I want bacon","just bacon","killa bacon","lots 'O bacon","more bacon","nothing but bacon","Oh, some bacon","Please bacon","Quickly! bacon!","Really good bacon","some bacon","true bacon","um, bacon","valient bacon","want bacon..","Xtra bacon","Your bacon","Zhe bacon!" ];
+$("#autocomplete").autocomplete({
+  source: function( request, response ) {
+          var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
+          response( $.grep( tags, function( item ){
+              return matcher.test( item );
+          }) );
+      }
+});
+
+$("#slider").slider({ min: 10, max: 1000, change: function(event, ui) { $("#slidervalue").val("$" + ui.value);}});
+
+$("#resizable").resizable();
+
+$("#sortable").sortable();
+
+$( "#draggable" ).draggable();
+$( "#droppable" ).droppable({
+  drop: function() {
+    alert( "You ate the bacon!!!" );
+  }
+});
+
+});
+</script>
+
+</body>
+</html>

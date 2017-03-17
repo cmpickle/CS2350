@@ -1,0 +1,13 @@
+/*
+
+*/
+
+@page {
+			size:8.5in; 
+			margin: 0.5in;
+}
+
+header, nav, footer, .validator, .img, .div {
+				display: none;
+}
+

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>A3</title>
+
+<!-- 
+Author: Cameron Pickle
+File: ~/cp96123/public_html/A#/A3.html
+Honor Code: I acknowledge that this code represents my own work: 5/23/16
+-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Demonstrate building a table and a form." />
+<meta name="keywords" content="table, form, xhtml" />
+<meta name="author" content="Cameron Pickle" />
+
+
+</head>
+
+<body> 
+<h1>Sample Table</h1>
+<table id="schedule" summary="This table provides a listing of the room reservations from 8:00 a.m. to 5:00 p.m. at the Weber State CS Conference Room" border="1">
+<caption>CS Conference Room Schedule<br/>May 29-June 4, 2016</caption>
+<colgroup>
+  <col class="firstColumn"/>
+	<col class="timeColumns" span="18"/>
+</colgroup>
+<thead>
+  <tr>
+    <th/>
+    <th colspan="8">morning</th>
+  	<th colspan="2">noon</th>
+  	<th colspan="8">afternoon</th>
+	</tr>
+</thead>
+<tbody>
+  <tr>
+    <th>Day</th>
+  	<td>8:00</td>
+  	<td>8:30</td>
+  	<td>9:00</td>
+  	<td>9:30</td>
+  	<td>10:00</td>
+  	<td>10:30</td>
+  	<td>11:00</td>
+  	<td>11:30</td>
+  	<td>12:00</td>
+  	<td>12:30</td>
+  	<td>1:00</td>
+  	<td>1:30</td>
+  	<td>2:00</td>
+  	<td>2:30</td>
+  	<td>3:00</td>
+  	<td>3:30</td>
+  	<td>4:00</td>
+  	<td>4:30</td>
+	</tr>
+	<tr>
+	  <th>Sunday</th>
+		<td colspan="18">Closed</td>
+	</tr>
+	<tr>
+	  <th>Monday</th>
+		<td colspan="2">CS Breakfast Club</td>
+		<td colspan="4"/>
+		<td colspan="4">Conference of Software Engineers</td>
+		<td colspan="2"/>
+		<td colspan="6">CS Book Group</td>
+	</tr>
+	<tr>
+	  <th>Tuesday</th>
+		<td colspan="8">Computer Expo Set Up</td>
+		<td colspan="2"/>
+		<td colspan="8">Computer Expo Opening Session</td>
+	</tr>
+	<tr>
+	  <th>Wednesday</th>
+		<td colspan="14">Computer Expo</td>
+		<td colspan="4">Awards Ceremony</td>
+	</tr>
+	<tr>
+	  <th>Thursday</th>
+		<td colspan="2"/>
+		<td colspan="3">ACM Club</td>
+		<td colspan="3">Study Abroad Club</td>
+		<td colspan="4">Women in Computing Club</td>
+		<td colspan="3"/>
+		<td colspan="3">Tutoring</td>
+  </tr>
+	<tr>
+	  <th>Friday</th>
+		<td colspan="2"/>
+		<td colspan="3">Frshman Seminar</td>
+		<td colspan="3"/>
+		<td colspan="2">CS Luncheon</td>
+		<td colspan="5">Senior Seminar</td>
+		<td colspan="3">Tutoring</td>
+	</tr>
+	<tr>
+	  <th>Saturday</th>
+		<td colspan="11">Video Game Club</td>
+		<td colspan="4"/>
+		<td colspan="3">Tutoring</td>
+	</tr>
+</tbody>
+</table>
+
+<h1>Sample Form</h1>
+<form id="sampleForm" action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi" method="post">
+<table border="1">
+  <tr>
+  		<td><label>Full Name</label></td>
+			<td><input type="text" id="fullName" name="fullName" /></td>
+  </tr>
+	<tr>
+	  <td><label>Email</label></td>
+		<td><input type="text" id="email" name="email" /></td>
+	</tr>
+	<tr>
+	  <td><label>Password</label></td>
+		<td><input type="password" id="password" name="password" /></td>
+	</tr>
+	<tr>
+	  <td><label>Confirm Password</label></td>
+		<td><input type="password" id="confPassword" name="confPassword" /></td>
+	</tr>
+	<tr>
+	  <td colspan="2">
+    	<fieldset id="favColor">
+    	<legend>Favorite Color</legend>
+				<input type="radio" id="green" name="color" value="green" /><label for="green">Green</label>
+				<input type="radio" id="blue" name="color" value="blue" /><label for="blue">Blue</label>
+				<input type="radio" id="red" name="color" value="red" /><label for="red">Red</label>
+			</fieldset>
+		</td>
+	</tr>
+	<tr>
+	  <td colspan="2">
+    	<fieldset id="favDays">
+    	<legend>Favorite Days of the Week</legend>
+				<label for="sunday">Sunday</label><input type="checkbox" id="sunday" name="sunday" />
+				<label for="monday">Monday</label><input type="checkbox" id="monday" name="monday" />
+				<label for="tuesday">Tuesday</label><input type="checkbox" id="tuesday" name="tuesday" />
+				<label for="wednesday">Wednesday</label><input type="checkbox" id="wednesday" name="wednesday" />
+				<label for="thursday">Thursday</label><input type="checkbox" id="thursday" name="thursday" />
+				<label for="friday">Friday</label><input type="checkbox" id="friday" name="friday" checked="checked" />
+				<label for="saturday">Saturday</label><input type="checkbox" id="saturday" name="saturday" checked="checked" />
+			</fieldset>
+		</td>
+	</tr>
+  <tr>
+	  <td colspan="2"><label>Favortie Month of the Year</label>
+		  <select id="favMonth" name="favMonth">
+			  <optgroup label="Fall">
+  				<option value="sep">September</option>
+  				<option value="oct">October</option>
+  				<option value="nov">November</option>
+				</optgroup>
+				<optgroup label="Winter">
+  				<option value="dec">December</option>
+  			  <option value="jan">January</option>
+  				<option value="feb">February</option>
+				</optgroup>
+				<optgroup label="Spring">
+  				<option value="mar">March</option>
+  				<option value="apr">April</option>
+  				<option value="may">May</option>
+				</optgroup>
+				<optgroup label="Summer">
+  				<option value="jun">June</option>
+  				<option value="jul">July</option>
+  				<option value="aug">August</option>
+				</optgroup>
+			</select>
+		</td>
+	</tr>
+	<tr>
+	  <td colspan="2"><label for="twitter">Twitter Comments </label><textarea id="twitter" name="twitter" rows="7" cols="20"></textarea></td>
+	</tr>
+	<tr>
+	  <td colspan="2">
+		  <input type="hidden" name="feedback" id="feedback" value="This assignment was helpful to better understand tables and forms. It also shows me how tedious setting up all of the user interface for there elements can be." />
+      <input type="submit" value="Submit Form" />
+      <input type="reset" value="Clear Form" />
+		</td>
+	</tr>
+</table>
+</form>
+<p>
+    <a href="http://validator.w3.org/check?uri=referer">
+		<img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+ </p>
+</body>
+</html>

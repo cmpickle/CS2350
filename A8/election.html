@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--
+
+   A8: Congressional Race Results
+   Author: Cameron Pickle
+   Date: 7/14/16
+
+
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><!-- <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" /> -->
+<meta name="description" content="Congressional Voting Stats" />
+<meta name="keywords" content="Election, Congress, Voting Stats" />
+<meta name="author" content="Cameron Pickle" />
+   <title>Congressional Races</title>
+   <link href="results.css" rel="stylesheet" type="text/css" />
+	 <script type="text/javascript" src="votes.js"></script>
+	 <script type="text/javascript">
+/* <![CDATA[ */
+{
+//Calculates the total sum of votes in a votes array
+function totalVotes(votes) {
+   var total = 0;
+	 for(var i=0; i<votes.length; i++) { //sums each individual element of votes array
+	    total += votes[i];
+   }
+	 return total;
+}
+
+//Calculates the percentage of an item given it's sum
+function calcPercent(item, sum) {
+   return Math.round(item / sum * 100); //divides the item by it's sum and multiplies it by 100 to get a percentage that is then rounded to the nearest int
+}
+
+//Creates a bar using table elements styled with css to represent a percentage
+function createBar(partyType, percent) {
+   switch(partyType) {
+	    case "D": //if democrat party
+			   barText = "<td class='dem'> </td>";
+				 break;
+		  case "R": //if republican party
+			   barText = "<td class='rep'> </td>";
+				 break;
+			case "I": //if independant party
+			   barText = "<td class='ind'> </td>";
+				 break;
+			case "G": //if green party
+			   barText = "<td class='green'> </td>";
+				 break;
+			case "L": //if liberal party
+			   barText = "<td class='lib'> </td>";
+				 break;
+			}
+				 
+	  for(var j=0; j<percent; j++) {
+		   document.write(barText); //writes out the appropriate amount of barText array elements determined by the switch statement
+		}
+}
+
+//The function called to show the results of a congressional race
+//race - race name
+//names - array of names of the candidates
+//party - array of partys that corrisponds to the candidate name array
+//votes - array of votes that corrisponds to the candidate name array
+function showResults(race, names, party, votes) {
+		//calculates total number of votes for election
+   	totalV = totalVotes(votes);
+		
+		//creates the table header
+		document.write("<h2>" + race + "</h2>");
+		document.write("<table>");
+		document.write("<tr>");
+		document.write("<th>Candidate</th>");
+		document.write("<th class='num'>Votes</th>");
+		document.write("<th class='num'>%</th>");
+		document.write("</tr>");
+		
+		//A loop that creates the data for each candidate
+		for(var k=0; k<names.length; k++) {
+		   document.write("<tr>");
+			 document.write("<td>" + names[k] + " (" + party[k] + ")"); //candidate party and name
+			 document.write("<td class='num'>" + votes[k] + "</td>"); //candidate number of votes
+			 
+		   percent = calcPercent(votes[k], totalV);
+			 document.write("<td class='num'>(" + percent + "%)</td>"); //percentage of votes for candidate
+			 
+			 createBar(party[k], percent); //bar percentage of votes for candidate
+			 
+			 document.write("</tr>");
+		}
+		
+		document.write("</table>");
+}
+};
+/* ]]> */
+</script>
+
+</head>
+
+<body>
+
+   <div id="intro">
+      <p><img src="logo.jpg" alt="Election Day Results" /></p>
+      <a href="#">Election Home Page</a>
+      <a href="#">President</a>
+      <a href="#">Senate Races</a>
+      <a href="#">Congressional Races</a>
+      <a href="#">State Senate</a>
+      <a href="#">State House</a>
+      <a href="#">Local Races</a>
+      <a href="#">Judicial</a>
+      <a href="#">Referendums</a>
+   </div>
+
+   <div id="results">
+      <h1>Congressional Races</h1>
+			<script type="text/javascript">
+/* <![CDATA[ */
+{
+//print out the congressional race results for races 1-5
+showResults(race[0], name1, party1, votes1);
+showResults(race[1], name2, party2, votes2);
+showResults(race[2], name3, party3, votes3);
+showResults(race[3], name4, party4, votes4);
+showResults(race[4], name5, party5, votes5);
+};
+/* ]]> */
+</script>
+
+   </div>
+<p class="validator">
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+  </p>
+</body>
+</html>

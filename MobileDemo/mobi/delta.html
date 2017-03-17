@@ -1,0 +1,72 @@
+
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Windy Kite Store</title>
+
+<!-- REQUIRED JQUERY AND CSS -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	
+
+<!-- REQUIRED FOR CHROME (LOCAL TESTING) -->
+<script>
+$(document).bind('mobileinit',function(){
+    
+    $.mobile.pushStateEnabled = false;
+});
+</script>
+
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+<!--END CHROME -->
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+    <a href="index.html" data-role="button" data-icon="arrow-l" rel="external">Back</a>
+		<h1>Delta Kites</h1>
+	</div>
+	<div data-role="content">
+    <p>Delta kites are classic single line kites and one of the easiest to fly. Bright graphics and range of size from 4' to 20' in width makes this collection very large.</p>
+        
+        <ul data-role="listview" data-inset="true" >
+		  <li><a href="#" >Simple Rainbow"</a></li>
+            <li><a href="#">Box 70</a></li>
+			<li><a href="#">Black Knight</a></li>
+            <li><a href="#">Elephant Kite</a></li>
+		</ul>
+        	
+<a href="#" data-role="button" data-icon="star" data-theme="e">Accessories </a>	
+		
+        	
+	</div><!-- end content -->
+</div><!-- end page -->
+
+
+
+<div data-role="page" id="page" data-add-back-btn="true">
+	<div data-role="header">
+		<h1>?????</h1>
+	</div>
+	<div data-role="content">	
+		        <p>No Content yet</p>
+	</div><!-- end content -->
+	<div data-role="footer" data-position="fixed">
+		<span>Kitty Hawk Kites</span>
+	</div><!-- end footer -->
+</div><!-- end page -->
+
+
+
+
+
+
+
+
+</body>
+</html>

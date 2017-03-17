@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Windy Kite Store</title>
+
+<!-- REQUIRED JQUERY AND CSS -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	
+
+<!-- REQUIRED FOR CHROME (LOCAL TESTING) -->
+<script>
+$(document).bind('mobileinit',function(){
+    
+    $.mobile.pushStateEnabled = false;
+});
+</script>
+
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+<!--END CHROME -->
+
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Kitty Hawk Kites</h1>
+	</div>
+	<div data-role="content">
+    <p>Kitty Hawk Kites specializes in providing you the best selection of quality kites. We do not sell anything we haven't tested and found worthy of our support.</p>	
+		<ul data-role="listview">
+			<li><a href="foil.html" rel="external">Foil Kites</a></li>
+            <li><a href="delta.html" rel="external">Delta Kites</a></li>
+            <li><a href="#video">How to Launch a Kite</a></li>
+			<li><a href="#contact" data-transition="slideup">Contact Us</a></li> 
+		</ul>
+        <p>Please contact our store at 801-555-1234 for any questions or assistance with an order.</p>		
+	</div><!-- end content -->
+</div><!-- end page -->
+
+
+
+<div data-role="page" id="video" data-add-back-btn="true">
+	<div data-role="header">
+		<h1>Launch a Kite</h1>
+	</div>
+	<div data-role="content">	
+		<p>Assembling and launching a steering kite by your self can be tricky business. Here is a quick tutorial on how I make it happen.</p>
+<iframe width="300" height="233" src="http://www.youtube.com/embed/sSJoLwsyyiw?rel=0" frameborder="0" allowfullscreen></iframe>
+          
+        
+        
+        
+        
+	</div><!-- end content -->
+	<div data-role="footer" data-position="fixed">
+		<span>Kitty Hawk Kites</span>
+	</div><!-- end footer -->
+</div><!-- end page -->
+
+
+
+
+
+
+
+<div data-role="page" id="contact" data-add-back-btn="true">
+	<div data-role="header">
+		<h1>Contact Us</h1>
+	</div>
+	<div data-role="content">
+    <p>Please feel free to ask about any kite we have in the store. We are here to make you life awesome!</p>
+    <form action="#" method="post" enctype="multipart/form-data">	
+<div data-role="fieldcontain">
+    <label>Name:<input type="text" name="name" id="name" value=""  /></label>
+    <label>Email:<input type="email" name="email" id="email" value=""  /></label>
+    <label>Phone:<input type="number" name="phone" id="phone" value=""  /></label>
+</div>	
+   <div data-role="fieldcontain">
+    <label>Question:<textarea name="textarea" id="textarea-a"></textarea></label>
+
+</div>     
+        <button class="ui-btn-hidden" data-theme="b" type="submit" aria-disabled="false">Submit</button>
+    </form>
+        
+        
+	</div><!-- end content -->
+	<div data-role="footer" data-position="fixed">
+		<span>Kitty Hawk Kites</span>
+	</div><!-- end footer -->
+</div><!-- end page -->
+
+</body>
+</html>

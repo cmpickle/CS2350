@@ -1,0 +1,91 @@
+header,footer,article,section,hgroup,nav{
+  background-color: grey;
+	padding: 20px;
+	margin: 20px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	width: 100%;
+	text-align: center;
+
+	-moz-box-shadow: 10px 10px 5px blue;
+	-webkit-box-shadow: 10px 10px 5px blue;
+	box-shadow: 10px 10px 5px blue;
+}
+
+.content{
+ display: inline-block; 
+}
+
+nav{
+  background-color: #eeeeee;
+	padding:0 5px;
+
+	border:10px solid #eeeeee;
+}
+
+nav ul li{
+  list-style-type: none;
+}
+
+nav ul li a,nav ul li a:visited{
+	color:blue;
+	font-size:1.25em;
+	font-weight:bold;
+	text-shadow:0 1px 1px black;
+	text-transform:uppercase;
+}
+
+nav ul li a:hover{
+	text-decoration:none;
+	background-color:yellow;
+}
+
+nav, article, nav ul li a,figure{
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color:orange;
+	font-family: halo, arial, sans-serif;
+}
+
+body{
+  background-color:#555555;
+  width: 95%;
+	max-width: 1000px;
+	min-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p, figcaption, label{
+  color: white;
+	width: 500px;
+	text-align: left;
+	text-shadow:0 1px 1px black;
+}
+
+figcaption{
+  width: 240px;
+	font-size: .7em;
+	text-align: center;
+}
+
+tr td{
+  text-align: left;
+}
+
+#submit{
+  text-align: center;
+}
+
+@font-face {
+    font-family: 'halo';
+    src: url('../fonts/halo.eot');
+    src: url('../fonts/halo.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/halo.woff') format('woff'),
+         url('../fonts/halo.ttf') format('truetype');
+}
